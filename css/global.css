@@ -12,21 +12,21 @@ section {
     min-height: 100vh;
 }
 
-section.mainPage {
+section.hero {
     padding: 100px;
 }
 
-section.secPage {
+section.intro {
     padding: 50px 100px;
     align-items: flex-start;
 }
 
-section.thirdPage {
+section.prices {
     padding: 50px 100px;
     align-items: flex-start;
 }
 
-.content {
+.intro__content {
     position: relative;
     display: flex;
     justify-content: space-between;
