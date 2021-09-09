@@ -1,0 +1,44 @@
+.prices__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prices__info h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #37447E;
+    margin-top: 88px;
+}
+
+.prices__info h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #091133;
+    margin-top: 16px;
+}
+
+.prices__info p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #5D6970;
+    margin-top: 8px;
+}
+
+.prices__info button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    background-color: #111B47;
+    margin-top: 30px;
+    border-radius: 2px;
+    border: none;
+    padding: 8px 32px;
+}
+
+.prices__info div {
+    padding: 0 110px 0 0;
+}
