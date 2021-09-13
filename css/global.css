@@ -11,38 +11,3 @@ section {
     align-items: center;
     min-height: 100vh;
 }
-
-section.hero {
-    padding: 100px;
-}
-
-section.intro {
-    padding: 50px 100px;
-    align-items: flex-start;
-}
-
-section.prices {
-    padding: 50px 100px;
-    align-items: flex-start;
-}
-
-.intro__content {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rect {
-    position: absolute;
-    left: 55%;
-    top: 25%;
-    width: 45%;
-    height: 75%;
-    object-fit: none;
-    object-position: 0 0;
-    border-radius: 64px 0 0 0;
-    background-color: black;
-    border-top: 25px solid;
-    border-left: 25px solid;
-}

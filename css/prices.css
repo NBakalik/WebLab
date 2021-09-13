@@ -1,3 +1,8 @@
+.prices {
+    padding: 50px 100px;
+    align-items: flex-start;
+}
+
 .prices__info {
     display: flex;
     justify-content: space-between;
@@ -41,4 +46,35 @@
 
 .prices__info div {
     padding: 0 110px 0 0;
+}
+
+.prices__text-box h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #091133;
+}
+
+.prices__text-box > p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #6F7CB2;
+    margin-top: 23px;
+}
+
+.prices__text-box {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .prices{
+        text-align: center;
+        padding: 20% 10%;
+    }
+    .prices__info{
+        flex-direction: column;
+    }
+    .prices__info div {
+        padding: 0;
+    }
 }
