@@ -1,5 +1,6 @@
 .intro {
-    padding: 50px 100px;
+    padding: 100px;
+    display: block;
     align-items: flex-start;
 }
 
@@ -29,12 +30,12 @@
 }
 
 .intro__content__img{
-    width: 70%;
+    width: 30%;
 }
 
 @media screen and (max-width: 900px) {
     .intro{
-        padding: 20% 10%;
+        padding: 0 10%;
     }
     .intro__content{
         flex-direction: column;
@@ -44,5 +45,11 @@
     .intro__text-box{
         padding-right: 0;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .intro__content__img{
+        width: 50%;
     }
 }

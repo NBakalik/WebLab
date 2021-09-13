@@ -13,18 +13,18 @@
     <img class="hero_img" src="img/mainPage.svg" alt="uix">
     <header class="header">
         <a href="#" class="header__logo">Landie</a>
-        <div class="header__menu">
+        <div class="header__menu" onclick="toggleMenu()">
             <img src="img/menu-icon.svg" alt="menu-icon">
         </div>
-        <nav>
+        <nav class="nav__container" id="menu">
             <ul class="header__nav">
                 <li class="header__nav-item"><a href="#">Home</a></li>
                 <li class="header__nav-item"><a href="#">About</a></li>
                 <li class="header__nav-item"><a href="#">Pricing</a></li>
-                <li class="header__nav-item">
+                <li class="header__nav-item button">
                     <button type="button" class="header__button-learn-more">Learn more</button>
                 </li>
-                <li class="header__nav-item">
+                <li class="header__nav-item button">
                     <button type="button" class="header__button-buy-now">Buy now</button>
                 </li>
             </ul>
@@ -136,6 +136,7 @@
         </div>
     </div>
 </footer>
+<script src="main.js"></script>
 </body>
 
 </html>

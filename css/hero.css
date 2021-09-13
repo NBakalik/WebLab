@@ -1,5 +1,6 @@
 .hero {
     padding: 100px;
+    min-height: 770px;
 }
 
 .hero_img {
