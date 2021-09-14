@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 88px;
 }
 
 .prices__info h3 {
@@ -14,7 +15,6 @@
     font-weight: 500;
     font-size: 36px;
     color: #37447E;
-    margin-top: 88px;
 }
 
 .prices__info h4 {
@@ -45,7 +45,17 @@
 }
 
 .prices__info div {
-    padding: 0 110px 0 0;
+    margin: 0 110px 0 0;
+}
+.prices__info div:hover{
+    padding: 30px;
+    border-radius: 30px;
+    background: #efecec;
+    transition: 0.6s ease-in-out ;
+}
+.prices__info div:hover p {
+    transition: 0.6s ease-in-out ;
+    font-size: 0.7em;
 }
 
 .prices__text-box h2 {
@@ -75,6 +85,7 @@
         flex-direction: column;
     }
     .prices__info div {
-        padding: 0;
+        padding: 20px;
+        margin: 0;
     }
 }

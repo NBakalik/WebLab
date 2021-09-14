@@ -33,6 +33,7 @@
 
 .hero__text-box {
     width: 45%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 @media screen and (max-width: 900px) {
     .hero{
@@ -47,5 +48,12 @@
     .hero__text-box{
         width: 100%;
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .hero_img{
+        width: 85%;
+        border-radius: 64px 64px 0 0;
     }
 }

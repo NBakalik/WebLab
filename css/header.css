@@ -35,6 +35,11 @@ header {
     font-size: 14px;
 }
 
+.header__nav-item a:hover {
+    transition: 0.1s linear;
+    transform: translateY(-2px);
+}
+
 .header__nav-item button {
     border-radius: 2px;
     border-width: 0;
@@ -43,6 +48,11 @@ header {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
+}
+
+.header__nav-item button:hover {
+    transition: 0.1s linear;
+    transform: translateY(-2px);
 }
 
 .header__button-learn-more {
@@ -72,37 +82,39 @@ header {
     }
 
     .nav__container {
-        display: none;
+        clip-path: circle(0 at top right);
+        transition: 1s linear;
     }
 
     .nav__container.open {
         display: flex;
+        clip-path: circle(1000px at top right);
     }
 
-    .open .header__nav {
+    .header__nav {
         flex-direction: column;
         height: 80vh;
         background-color: white;
     }
 
-    .open .header__nav-item {
+    .header__nav-item {
         width: 80vw;
         text-align: center;
         margin-top: 10px;
         flex: 1;
     }
 
-    .open .header__nav-item a {
+    .header__nav-item a {
         margin-left: 0;
         margin-top: 10px;
         font-size: 32px;
     }
 
-    .open .header__button-learn-more {
+    .header__button-learn-more {
         margin-left: 0;
     }
 
-    .open .header__nav-item.button {
+    .header__nav-item.button {
         display: none;
     }
 
