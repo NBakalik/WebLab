@@ -3,24 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
     <title>Landie</title>
 </head>
 
 <body>
 <section class="hero">
-    <img class="rect" src="img/mainPage.svg" alt="uix">
+    <img class="hero_img" src="img/mainPage.svg" alt="uix">
     <header class="header">
         <a href="#" class="header__logo">Landie</a>
-        <nav class="header__nav">
-            <ul>
+        <div class="header__menu" onclick="toggleMenu()">
+            <img src="img/menu-icon.svg" alt="menu-icon">
+        </div>
+        <nav class="nav__container" id="menu">
+            <ul class="header__nav">
                 <li class="header__nav-item"><a href="#">Home</a></li>
                 <li class="header__nav-item"><a href="#">About</a></li>
                 <li class="header__nav-item"><a href="#">Pricing</a></li>
-                <li class="header__nav-item">
+                <li class="header__nav-item button">
                     <button type="button" class="header__button-learn-more">Learn more</button>
                 </li>
-                <li class="header__nav-item">
+                <li class="header__nav-item button">
                     <button type="button" class="header__button-buy-now">Buy now</button>
                 </li>
             </ul>
@@ -69,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <img src="img/2_pagePic.svg" alt="AbstractGirlPic">
+        <img class="intro__content__img" src="img/2_pagePic.svg" alt="AbstractGirlPic">
     </div>
 </section>
 <section class="prices">
@@ -108,14 +112,14 @@
 
 <footer>
     <div class="footer__info">
-        <h4>©2020 LPNU</h4>
-        <a href="#" class="logo">Landie</a>
+        <h4 class="footer__info__date">©2020 LPNU</h4>
+        <a href="#" class="footer__info__logo">Landie</a>
     </div>
-    <hr>
+    <hr class="footer__hr">
     <div class="footer__navigation">
         <button type="button">IoT edition</button>
         <nav>
-            <ul>
+            <ul class="footer__navigation__items">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -132,6 +136,7 @@
         </div>
     </div>
 </footer>
+<script src="main.js"></script>
 </body>
 
 </html>

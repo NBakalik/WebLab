@@ -1,0 +1,59 @@
+.hero {
+    padding: 100px;
+    min-height: 770px;
+}
+
+.hero_img {
+    position: absolute;
+    left: 55%;
+    top: 25%;
+    width: 45%;
+    height: 75%;
+    object-fit: none;
+    object-position: 0 0;
+    border-radius: 64px 0 0 0;
+    background-color: black;
+    border-top: 25px solid;
+    border-left: 25px solid;
+}
+
+.hero__text-box h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #091133;
+}
+
+.hero__text-box > p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #6F7CB2;
+    margin-top: 23px;
+}
+
+.hero__text-box {
+    width: 45%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+@media screen and (max-width: 900px) {
+    .hero{
+        flex-direction: column;
+        padding: 20% 10%;
+    }
+
+    .hero_img{
+        display: none;
+    }
+
+    .hero__text-box{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .hero_img{
+        width: 85%;
+        border-radius: 64px 64px 0 0;
+    }
+}
