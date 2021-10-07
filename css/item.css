@@ -38,6 +38,20 @@ li{
 .button__remove:hover{
     border-style: dotted;
 }
+
+.button__edit{
+    padding: 5px 25px;
+    border-color: deepskyblue;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #f3f2f2;
+    color: deepskyblue;
+    margin-top: 5px;
+}
+
+.button__edit:hover{
+    border-style: dotted;
+}
 .item__info{
     margin-top: 5px;
 }

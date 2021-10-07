@@ -3,7 +3,7 @@ const amountOfPeopleInput = document.getElementById("amount");
 const fuelVolumeInput = document.getElementById("fuel_volume");
 const itemContainer = document.getElementById("items_container");
 
-let index = 4;
+let index = 1;
 export const clearInput = () => {
     titleInput.value = "";
     amountOfPeopleInput.value = "";
@@ -17,22 +17,29 @@ export const itemTemplate = ({id, name, amount, fuelVolume}) => `
             <h3 class="item__title">${name}</h3>
             <h5 class="item__info amount">Amount of people: ${amount}</h5>
             <h5 class="item__info fuel">Volume of Fuel: ${fuelVolume}</h5>
-            <button id="${id}" class="button__remove" onClick='reply_click(${id})'>Remove</button>
+            <div class="wrapper">
+                <button class="button__remove" onClick='deleteItem(${id})'>Remove</button>
+                <button class="button__edit" onClick='editItem(${id})'>Edit</button>
+            </div>
         </div>
-</li>
-<script type="text/javascript">
-    
-</script>`;
+</li>`;
 
 
 export const getInputValues = () => {
-
-    return {
-        id: index++,
-        name: titleInput.value,
-        amount: amountOfPeopleInput.value,
-        fuelVolume: fuelVolumeInput.value,
-    };
+    if (titleInput.validity.valueMissing || titleInput.validity.patternMismatch) {
+        alert('Please enter correct name')
+    } else if (amountOfPeopleInput.validity.patternMismatch || amountOfPeopleInput.validity.valueMissing) {
+        alert('Please enter correct amount of people')
+    } else if (fuelVolumeInput.validity.patternMismatch || fuelVolumeInput.validity.valueMissing) {
+        alert('Please enter correct fuel volume')
+    } else {
+        return {
+            id: index++,
+            name: titleInput.value,
+            amount: amountOfPeopleInput.value,
+            fuelVolume: fuelVolumeInput.value,
+        };
+    }
 };
 
 export const renderItemsList = (items) => {
