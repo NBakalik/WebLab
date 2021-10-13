@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/item.css" rel="stylesheet">
+    <link href="css/create.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header__nav">
+        <a class="header__nav__label">Airport</a>
+        <a href="index.html" class="header__nav__text active">My planes</a>
+    </div>
+    <div class="header__search">
+        <form>
+            <input id="search__input" class="header__search__input" type="text" placeholder="Type something...">
+        </form>
+        <button id="button__find" class="header__search__button-find">Search</button>
+        <button id="button__clear" class="header__search__button-clear">Clear</button>
+    </div>
+</header>
+<section class="main__page">
+    <div class="main__page__bar">
+        <div class="bar__container">
+            <h3>Manage planes</h3>
+            <div class="bar__sort">
+                <h4 class="bar__text">Sort by amount<br> of people</h4>
+                <input type="checkbox" name="switch" id="switch">
+                <label for="switch" class="switch"></label>
+            </div>
+            <hr>
+            <h4 class="bar__text">Count total amount of people</h4>
+            <button id="button__count" type="button" class="bar__button">Count</button>
+            <div class="bar__count__info">
+                <h4 class="bar__text">Total amount of people:</h4>
+                <h4 class="bar__count hidden" id="bar__count"></h4>
+            </div>
+        </div>
+    </div>
+    <div class="vl"></div>
+    <ul id="items_container" class="main__page__items">
+    </ul>
+    <div class="vl"></div>
+    <section class="add">
+        <form class="add__plane">
+            <h1>Create plane</h1>
+            <label for="title" class="form__title__label">Name</label>
+            <input class="form__title" id="title" type="text" placeholder="Text..." required pattern="[\w\s]+">
+            <label for="amount" class="form__amount__label">Amount of people</label>
+            <input class="form__amount" id="amount" type="text" required pattern="[0-9]*">
+            <label for="fuel_volume" class="form__description__label">Volume of fuel</label>
+            <input class="form__description" id="fuel_volume" type="text" required pattern="[0-9]*">
+            <button id="button__submit" type="submit" class="submit">Submit</button>
+        </form>
+    </section>
+</section>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/util.js"></script>
+</body>
+</html>

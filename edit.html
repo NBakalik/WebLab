@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/edit.css" rel="stylesheet">
+</head>
+<body>
+<section class="edit">
+    <form class="edit__plane">
+        <h1>Create plane</h1>
+        <label for="title" class="form__title__label">Name</label>
+        <input class="form__title" id="title" type="text" placeholder="Text..." required pattern="[\w\s]+">
+        <label for="amount" class="form__amount__label">Amount of people</label>
+        <input class="form__amount" id="amount" type="text" required pattern="[0-9]*">
+        <label for="fuel_volume" class="form__description__label">Volume of fuel</label>
+        <input class="form__description" id="fuel_volume" type="text" required pattern="[0-9]*">
+        <button id="button__submit" type="submit" class="submit">Submit</button>
+    </form>
+</section>
+<script type="module" src="./js/editPage.js"></script>
+</body>
+</html>

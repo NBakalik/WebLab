@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+
+.main__page {
+    display: flex;
+}
+
+.main__page__bar {
+    flex: 1;
+}
+
+.main__page__items {
+    flex: 3;
+}
+
+.bar__container {
+    padding: 20px;
+    text-align: center;
+}
+
+.bar__container h3 {
+    color: gray;
+    font-size: 24px;
+
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+label.switch {
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #dedede;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    align-self: center;
+}
+
+label.switch::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-color: deepskyblue;
+    position: absolute;
+    border-radius: 15px;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+}
+
+input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.bar__sort {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-content: center;
+}
+
+.bar__text {
+    color: gray;
+    font-size: 16px;
+}
+.bar__count{
+    visibility: visible;
+}
+.bar__count.hidden{
+    visibility: hidden;
+}
+.bar__button {
+    margin-top: 10px;
+    padding: 8px 30px;
+    color: black;
+    font-size: 16px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.bar__button:hover{
+    background-color: #02a4db;
+}
+
+.bar__count__info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.vl {
+    flex: 0;
+    border-left: 0.5px solid gray;
+    height: 93vh;
+}
+
