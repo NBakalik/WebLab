@@ -3,19 +3,18 @@ const amountOfPeopleInput = document.getElementById("amount");
 const fuelVolumeInput = document.getElementById("fuel_volume");
 const itemContainer = document.getElementById("items_container");
 
-let index = 1;
 export const clearInput = () => {
     titleInput.value = "";
     amountOfPeopleInput.value = "";
     fuelVolumeInput.value = "";
 };
 
-export const itemTemplate = ({id, name, amount, fuelVolume}) => `
+export const itemTemplate = ({id, name, amountOfPeople, fuelVolume}) => `
 <li>
     <img class="item__photo" src="/lab3/img/plane.png" alt="plane">
         <div class="item">
             <h3 class="item__title">${name}</h3>
-            <h5 class="item__info amount">Amount of people: ${amount}</h5>
+            <h5 class="item__info amount">Amount of people: ${amountOfPeople}</h5>
             <h5 class="item__info fuel">Volume of Fuel: ${fuelVolume}</h5>
             <div class="wrapper">
                 <button class="button__remove" onClick='deleteItem(${id})'>Remove</button>
@@ -34,9 +33,8 @@ export const getInputValues = () => {
         alert('Please enter correct fuel volume')
     } else {
         return {
-            id: index++,
             name: titleInput.value,
-            amount: amountOfPeopleInput.value,
+            amountOfPeople: amountOfPeopleInput.value,
             fuelVolume: fuelVolumeInput.value,
         };
     }
@@ -49,13 +47,13 @@ export const renderItemsList = (items) => {
     }
 };
 
-export const addItemToPage = ({id, name, amount, fuelVolume}) => {
+export const addItemToPage = ({id, name, amountOfPeople, fuelVolume}) => {
     itemContainer.insertAdjacentHTML("afterbegin",
-        itemTemplate({id, name, amount, fuelVolume})
+        itemTemplate({id, name, amountOfPeople, fuelVolume})
     );
 }
 
 export const calculate = (arr) => {
-    const arrAmountOfPeople = arr.map(plane => plane.amount);
+    const arrAmountOfPeople = arr.map(plane => plane.amountOfPeople);
     return arrAmountOfPeople.reduce((sum, current) => +sum + +current);
 }
