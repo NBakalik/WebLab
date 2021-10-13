@@ -20,9 +20,9 @@ const baseRequest = async ({urlPath = "", method = "GET", body = null}) => {
     }
 };
 
-export const getAllPlanes = () => {
-    const rawResponse = baseRequest({method: "GET"});
-    return rawResponse.json();
+export const getAllPlanes = async () => {
+    const rawResponse = await baseRequest({method: "GET"});
+    return await rawResponse.json();
 };
 
 export const addPlane = (body) => baseRequest({method: "POST", body});
