@@ -9,7 +9,7 @@ export function DestinationItems() {
     return (
         <div>
             <Wrapper>
-                <Image src={Bangkok}></Image>
+                <Image src={Bangkok}/>
                 <TextWrapper>
                     <Label>Bangkok</Label>
                     <Text>Sights, sounds and smells? Does it enlighten, enrich and entertain? Book a cheap flight to
@@ -17,15 +17,15 @@ export function DestinationItems() {
                 </TextWrapper>
             </Wrapper>
             <Wrapper>
-                <TextWrapper>
-                    <Label>NewYork</Label>
+                <TextWrapper style={{textAlign: 'right'}}>
+                    <Label>New York</Label>
                     <Text>Discover all the great things to do and see in New York. Book online your safe and guided
                         tour.</Text>
                 </TextWrapper>
-                <Image src={NewYork}></Image>
+                <Image src={NewYork}/>
             </Wrapper>
             <Wrapper>
-                <Image src={Venice}></Image>
+                <Image src={Venice}/>
                 <TextWrapper>
                     <Label>Venice</Label>
                     <Text>Explore the most famous sights of Venice, then sit back and relax on a gondola ride through
@@ -33,12 +33,12 @@ export function DestinationItems() {
                 </TextWrapper>
             </Wrapper>
             <Wrapper>
-                <TextWrapper>
+                <TextWrapper style={{textAlign: 'right'}}>
                     <Label>Colombo</Label>
                     <Text>Explore the sights of Colombo, from the commercial district and oriental bazaar, to sacred
                         temples and mosques.</Text>
                 </TextWrapper>
-                <Image src={Colombo}></Image>
+                <Image src={Colombo}/>
             </Wrapper>
             <Button>Read more</Button>
         </div>

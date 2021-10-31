@@ -75,6 +75,6 @@ export const FactLabel = styled.h3`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
 `
-export const FactText = styled.a`        
+export const FactText = styled.a`
   font-weight: 400;
 `
