@@ -13,7 +13,7 @@ import Airport from "../../images/airport.jpg"
 import AirbusFuture from "../../images/airbusFuture.jpg"
 import AirbusZero from "../../images/AirbusZEROe.png"
 import Gulfstream from "../../images/gulfstrim.jpg"
-import {Item} from "../Item/Item";
+import {HomeItem} from "../HomeItem/HomeItem";
 import {DestinationItems} from "../DestinationItems/DestinationItems";
 
 export function Home() {
@@ -24,13 +24,13 @@ export function Home() {
                     <Label>"Kyiv" International Airport</Label>
                     <ImageText>Your gateway to the world</ImageText>
                 </TextWrapper>
-                <Image src={Airport}></Image>
+                <Image src={Airport}/>
             </HeroWrapper>
             <ItemsLabel>Our planes</ItemsLabel>
             <ItemList>
-                <Item model={AirbusFuture} name={'AirbusFuture'}/>
-                <Item model={AirbusZero} name={'Airbus ZeroE'}/>
-                <Item model={Gulfstream} name={'Gulfstream ZeroE'}/>
+                <HomeItem model={AirbusFuture} name={'AirbusFuture'}/>
+                <HomeItem model={AirbusZero} name={'Airbus ZeroE'}/>
+                <HomeItem model={Gulfstream} name={'Gulfstream ZeroE'}/>
             </ItemList>
             <Button>View more</Button>
             <FactsWrapper>
@@ -54,7 +54,7 @@ export function Home() {
                     </Fact>
                 </Facts>
             </FactsWrapper>
-            <ItemsLabel style={{marginTop:'200px'}}>Your Destinations</ItemsLabel>
+            <ItemsLabel style={{marginTop: '200px'}}>Your Destinations</ItemsLabel>
             <DestinationItems/>
         </div>
     );
