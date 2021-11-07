@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   border-radius: 25px;
   padding: 10px;
   text-align: center;
-
+  margin: 10px;
   &:hover {
     box-shadow: 0 0 8px #777676;
   }

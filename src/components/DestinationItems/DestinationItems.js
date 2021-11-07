@@ -3,7 +3,6 @@ import Bangkok from "../../images/city/bangkok.jpg"
 import NewYork from "../../images/city/newYork.jpg"
 import Venice from "../../images/city/venice.jpg"
 import Colombo from "../../images/city/colombo.jpg"
-import {Button} from "../Home/Home.styles";
 
 export function DestinationItems() {
     return (
@@ -40,7 +39,6 @@ export function DestinationItems() {
                 </TextWrapper>
                 <Image src={Colombo}/>
             </Wrapper>
-            <Button>Read more</Button>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const GlobalWrapper = styled.div`
   display: flex;
   padding: 5px 80px;
 `

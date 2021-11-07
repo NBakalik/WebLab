@@ -15,8 +15,37 @@ import AirbusZero from "../../images/AirbusZEROe.png"
 import Gulfstream from "../../images/gulfstrim.jpg"
 import {HomeItem} from "../HomeItem/HomeItem";
 import {DestinationItems} from "../DestinationItems/DestinationItems";
+import {useState} from 'react';
+
 
 export function Home() {
+    const [viewMorePlanes, toggle] = useState(false);
+    const [planes, showAllPlanes] = useState([
+        {
+            name: "AirbusFuture",
+            model: AirbusFuture,
+        },
+        {
+            name: "Airbus ZeroE",
+            model: AirbusZero,
+        },
+        {
+            name: "Gulfstream",
+            model: Gulfstream,
+        }
+    ]);
+
+    function changePlanes() {
+        if (!viewMorePlanes) {
+            showAllPlanes(planes.concat(planes))
+        } else
+            showAllPlanes(planes.slice(0, 3))
+    }
+
+    function toggleView() {
+        toggle(!viewMorePlanes);
+        changePlanes();
+    }
     return (
         <div>
             <HeroWrapper>
@@ -28,11 +57,9 @@ export function Home() {
             </HeroWrapper>
             <ItemsLabel>Our planes</ItemsLabel>
             <ItemList>
-                <HomeItem model={AirbusFuture} name={'AirbusFuture'}/>
-                <HomeItem model={AirbusZero} name={'Airbus ZeroE'}/>
-                <HomeItem model={Gulfstream} name={'Gulfstream ZeroE'}/>
+                {planes.map(plane => (<HomeItem key={plane.name.toString()} name={plane.name} model={plane.model}/>))}
             </ItemList>
-            <Button>View more</Button>
+            <Button onClick={toggleView}>View more</Button>
             <FactsWrapper>
                 <ItemsLabel>Facts</ItemsLabel>
                 <Facts>
