@@ -9,7 +9,6 @@ export function Filter(props) {
     const [name, changeName] = useState("DEFAULT");
     const [order, changeOrder] = useState("DEFAULT");
     const [price, changePrice] = useState("DEFAULT");
-    const input = document.getElementById("search_input");
 
     function handleName(nameSelector) {
         changeName(nameSelector.target.value);
@@ -24,6 +23,7 @@ export function Filter(props) {
     }
 
     function updateItems() {
+        const input = document.getElementById("search_input");
         props.function(name, order, price, input);
     }
 
@@ -39,7 +39,7 @@ export function Filter(props) {
                 </Nav>
                 <NavWrapper>
                     <div style={{display: 'flex', alignItems: 'center'}}>
-                        <Search id={"search_input"}/>
+                        <Search id="search_input" placeholder={""}/>
                         <img src={SearchIcon} alt={"search"} style={{width: '20px', height: '20px', padding: '5px'}}/>
                     </div>
                 </NavWrapper>

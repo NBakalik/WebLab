@@ -6,30 +6,37 @@ import Colombo from "../../images/city/colombo.jpg"
 import Venice from "../../images/city/venice.jpg"
 import {Filter} from "../Filter/Filter";
 import {useState} from 'react';
+import {Header} from "../Header/Header";
+import {ItemPage} from "../ItemPage/ItemPage";
 
 export function Catalog() {
     const catalogItems = [
         {
             name: "Bangkok",
             price: 500,
+            text: "Sights, sounds and smells? Does it enlighten, enrich and entertain? Book a cheap flight to Bangkok, Thailand",
             image: Bangkok
         },
         {
             name: "New York",
             price: 1500,
+            text: "Discover all the great things to do and see in New York. Book online your safe and guided tour",
             image: NewYork
         },
         {
             name: "Colombo",
             price: 2000,
+            text: "Explore the sights of Colombo, from the commercial district and oriental bazaar, to sacred temples and mosques",
             image: Colombo
         },
         {
             name: "Venice",
             price: 450,
+            text: "Explore the most famous sights of Venice, then sit back and relax on a gondola ride through the peaceful canals",
             image: Venice
         }];
     const [items, update] = useState(catalogItems);
+    const [view, setView] = useState(null);
 
     function updateItems(name, order, price, input) {
         let resultArray = catalogItems;
@@ -57,13 +64,26 @@ export function Catalog() {
         update(array.filter(item => item.name.search(input.value) !== -1));
     }
 
+    function toggleView(props) {
+        console.log(props)
+        setView(props);
+    }
+
+    if (view == null)
+        return (
+            <>
+                <Filter function={updateItems}/>
+                <Wrapper>
+                    {items.map(item => (
+                        <CatalogItem key={item.name.toString()} name={item.name} price={item.price}
+                                     image={item.image} text={item.text} function={toggleView}/>))}
+                </Wrapper>
+            </>
+        )
     return (
         <>
-            <Filter function={updateItems}/>
-            <Wrapper>
-                {items.map(item => (
-                    <CatalogItem key={item.name.toString()} name={item.name} price={item.price} image={item.image}/>))}
-            </Wrapper>
+            <Header/>
+            <ItemPage item={view}/>
         </>
-    );
+    )
 }
