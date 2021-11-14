@@ -6,10 +6,9 @@ import Logo from "../../images/logo.png";
 import {Link} from "react-router-dom";
 
 export function Filter(props) {
-    const [name, changeName] = useState("DEFAULT");
-    const [order, changeOrder] = useState("DEFAULT");
-    const [price, changePrice] = useState("DEFAULT");
-    const input = document.getElementById("search_input");
+    const [name, changeName] = useState("null");
+    const [order, changeOrder] = useState("0");
+    const [price, changePrice] = useState("0");
 
     function handleName(nameSelector) {
         changeName(nameSelector.target.value);
@@ -24,6 +23,7 @@ export function Filter(props) {
     }
 
     function updateItems() {
+        const input = document.getElementById("search_input");
         props.function(name, order, price, input);
     }
 
@@ -39,7 +39,7 @@ export function Filter(props) {
                 </Nav>
                 <NavWrapper>
                     <div style={{display: 'flex', alignItems: 'center'}}>
-                        <Search id={"search_input"}/>
+                        <Search id="search_input" placeholder={""}/>
                         <img src={SearchIcon} alt={"search"} style={{width: '20px', height: '20px', padding: '5px'}}/>
                     </div>
                 </NavWrapper>
@@ -49,19 +49,19 @@ export function Filter(props) {
                 <FilterWrapper>
                     <LabelText>Sort by:</LabelText>
                     <FilterSelector id="name" onChange={handleName}>
-                        <option value="DEFAULT">Choose filter</option>
+                        <option value="null" selected>Choose filter</option>
                         <option value="price">Price</option>
                         <option value="name">Name</option>
                     </FilterSelector>
                     <LabelText>Order by:</LabelText>
                     <FilterSelector id="order" onChange={handleOrder}>
-                        <option value="DEFAULT">Choose order</option>
+                        <option value="0" selected>Choose order</option>
                         <option value="1">Ascending</option>
                         <option value="2">Descending</option>
                     </FilterSelector>
                     <LabelText>Price:</LabelText>
                     <FilterSelector id="price" onChange={handlePrice}>
-                        <option value="DEFAULT">Choose price</option>
+                        <option value="0" selected>Choose price</option>
                         <option value="1">&lt;=500</option>
                         <option value="2">&gt;500</option>
                     </FilterSelector>
